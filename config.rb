@@ -13,6 +13,8 @@
 
 activate :directory_indexes
 
+set :relative_links, true
+
 # Per-page layout changes:
 #
 # With no layout
