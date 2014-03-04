@@ -1,0 +1,110 @@
+/*
+ * Main custom css file
+ */
+$sidebar-width: 20%;
+$content-width: 100% - $sidebar-width;
+
+/* Kuler Colors */
+$kuler-blue: #0967A0;
+$kuler-blue-dark: #053E60;
+$kuler-blue-dark2: #042E47;
+$kuler-blue-dark3: #032133;
+$kuler-blue-light: #1A76AC;
+$kuler-red-light: #EC191D;
+
+$color-accent: $kuler-red-light;
+$color-bg-dark: #282828;
+$color-bg-light: #EEE;
+$color-bg-shadow: #222;
+$color-bg-sidebar: $kuler-blue-dark;
+$color-bg-sidebar-hover: $kuler-blue-dark2;
+$color-text-sidebar: #FFF;
+$color-link: #FFF;
+$color-link-hover: #CCC;
+
+html, body {
+ 	background-color: #DDD;
+ 	height: 100%;
+}
+
+p {
+	text-indent: 2em;
+}
+
+a, a:link, a:visited {
+	color: $color-link;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: $color-link-hover;
+}
+
+.mainframe {
+	width: 1200px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 4px 2px $color-bg-shadow;
+	background-color: $color-bg-light;
+	padding: 0;
+}
+
+.headerframe {
+	margin-top: 10px;
+	background-color: $color-bg-dark;
+	color: $color-accent;
+}
+
+.header {
+	padding: 20px 20px 20px 80px;
+	line-height: 1em;
+	text-shadow: 2px 2px 6px black;
+}
+
+.htitle {
+	color: $color-accent;
+	font-weight: normal;
+}
+
+.htagline {
+	color: white;
+	font-weight: normal;
+}
+
+.sidebar {
+	width: $sidebar-width - 1%;
+	background-color: $color-bg-sidebar;
+	color: $color-text-sidebar;
+	height: 100%;
+	float: left;
+
+	> ul {
+		> li {
+			list-style-type: none;
+			padding: 4px;
+			margin: 0;
+		}
+		> li:hover {
+			background-color: $color-bg-sidebar-hover;
+		}
+		> li > a {
+			display: block;
+			width: 100%;
+		}
+		padding: 0 0 0 4px;
+		margin: 0;
+	}
+}
+
+.content {
+	width: $content-width;
+	margin: 0 0 0 auto;
+	padding: 0 3px 3px 0;
+}
+
+.roundsmall {
+	border-radius: 2px;
+}
+
+.roundlarge {
+	border-radius: 4px;
+}

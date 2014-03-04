@@ -14,14 +14,31 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
+        <div class="mainframe headerframe roundlarge">
+            <div class="header">
+                <h1 class="htitle">Chemistry and Art: Old and New</h1>
+                <h3 class="htagline">Restoring the past, preserving the future</h3>
+            </div>
+        </div>
+        <div class="mainframe roundsmall">
+            <div class="sidebar roundsmall">
 
-        <%= yield %>
+            <%= partial "sidebar" %>
+
+            </div> <!-- sidebar -->
+            <div class="content roundsmall">
+
+            <%= yield %>
+
+            </div> <!-- content -->
+        </div> <!-- mainframe -->
 
         <script src="js/vendor/jquery-1.8.0.min.js"></script>
         <script src="js/plugins.js"></script>
