@@ -60,7 +60,7 @@ a:hover, a:active {
 	text-shadow: 2px 2px 6px black;
 }
 
-.htitle {
+.htitle, .htitle:link, .htitle:active, .htitle:visited, .htitle:hover {
 	color: $color-accent;
 	font-weight: normal;
 }
