@@ -32,6 +32,11 @@ $color-sidebar-link: $color-sidebar-text;
 $color-sidebar-link-hover: #FFF;
 $color-sidebar-link-active: $color-sidebar-text;
 
+/* Images */
+$color-image-bg: #EEE;
+$color-image-border: #555;
+$color-image-div-border: #666;
+
 /* Main */
 $color-page-bg: #AAA;
 $color-bg-dark: #222;
@@ -162,6 +167,32 @@ a:hover, a:active {
 	width: $content-width;
 	margin: 0 0 0 auto;
 	padding: 0 3px 3px 0;
+}
+
+div.img {
+	margin: 5px;
+	padding: 2px;
+	border: solid 1px $color-image-div-border;
+	background-color: $color-image-bg;
+
+	> img {
+		border: solid 1px $color-image-border;
+	}
+
+	> p {
+		margin: 3px 3px 0 3px;
+		padding: 0;
+		text-indent: 0;
+	}
+
+	&.left {
+		float: left;
+		margin-right: 10px;
+	}
+	&.right {
+		float: right;
+		margin-left: 10px;
+	}
 }
 
 .roundsmall {
