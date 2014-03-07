@@ -42,7 +42,8 @@ $color-link-hover: #CCC;
 
 /* General */
 html, body {
- 	background-color: $color-page-bg;
+	background-image: image-url("triangular.png");
+	background-size: 40px;
  	height: 100%;
 }
 
