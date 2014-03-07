@@ -1,8 +1,14 @@
 /*
  * Main custom css file
  */
-$sidebar-width: 20%;
-$content-width: 100% - $sidebar-width;
+@import "compass";
+
+$frame-width: 1000px;
+$sidebar-width: $frame-width * 0.2 - 15px;
+$content-width: $frame-width * 0.8;
+
+$header-height: 8em;
+$spacer-height: 1em;
 
 /* Kuler Colors */
 $kuler-blue: #0967A0;
@@ -12,16 +18,27 @@ $kuler-blue-dark3: #032133;
 $kuler-blue-light: #1A76AC;
 $kuler-red-light: #EC191D;
 
-$color-accent: $kuler-red-light;
-$color-bg-dark: #282828;
-$color-bg-light: #EEE;
-$color-bg-shadow: #222;
-$color-bg-sidebar: $kuler-blue-dark;
-$color-bg-sidebar-hover: $kuler-blue-dark2;
-$color-text-sidebar: #FFF;
-$color-link: #FFF;
+/* Title */
+$color-header-title: white;
+$color-header-bg: $kuler-red-light;
+
+/* Sidebar */
+$color-sidebar-bg: $kuler-blue-dark;
+$color-sidebar-bg: #EEE;
+$color-sidebar-bg-hover: $kuler-blue-dark2;
+$color-sidebar-vert-line: #888;
+$color-sidebar-text: #333;
+$color-sidebar-link: $color-sidebar-text;
+$color-sidebar-link-hover: #FFF;
+
+/* Main */
+$color-bg-dark: #222;
+$color-bg-light: #F9F9F9;
+$color-frame-shadow: #222;
+$color-link: #222;
 $color-link-hover: #CCC;
 
+/* General */
 html, body {
  	background-color: #DDD;
  	height: 100%;
@@ -40,28 +57,34 @@ a:hover, a:active {
 	color: $color-link-hover;
 }
 
-.mainframe {
-	width: 1200px;
-	margin: 0 auto;
-	box-shadow: 2px 2px 4px 2px $color-bg-shadow;
-	background-color: $color-bg-light;
-	padding: 0;
+.content > h1 {
+	margin-top: 0;
 }
 
+.mainframe {
+	width: $frame-width;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+}
+
+/* Header */
 .headerframe {
-	margin-top: 10px;
-	background-color: $color-bg-dark;
-	color: $color-accent;
+	position: relative;
+	z-index: 100;
+	height: $header-height;
+	color: $color-header-title;
+	@include background-image(linear-gradient($color-header-bg, darken($color-header-bg, 20%) 70%, darken($color-header-bg, 40%)));
 }
 
 .header {
-	padding: 20px 20px 20px 80px;
+	padding: 20px 20px 0 80px;
 	line-height: 1em;
 	text-shadow: 2px 2px 6px black;
 }
 
 .htitle, .htitle:link, .htitle:active, .htitle:visited, .htitle:hover {
-	color: $color-accent;
+	color: $color-header-title;
 	font-weight: normal;
 }
 
@@ -70,32 +93,64 @@ a:hover, a:active {
 	font-weight: normal;
 }
 
+/* Sidebar */
 .sidebar {
-	width: $sidebar-width - 1%;
-	background-color: $color-bg-sidebar;
-	color: $color-text-sidebar;
-	height: 100%;
+	width: $sidebar-width;
+	color: $color-sidebar-text;
 	float: left;
 
 	> ul {
 		> li {
 			list-style-type: none;
-			padding: 4px 4px 4px 8px;
 			margin: 0;
-		}
-		> li:hover {
-			background-color: $color-bg-sidebar-hover;
-		}
-		> li > a {
-			display: block;
-			width: 100%;
+			border: 1px solid $color-sidebar-bg;
+			> a {
+				width: $sidebar-width - 9px;
+				color: $color-sidebar-link;
+				padding: 4px 0 4px 8px;
+				display: block;
+			}
+			> a:hover {
+				color: $color-sidebar-link-hover;
+				background-color: $color-sidebar-bg-hover;
+			}
 		}
 		padding: 0;
 		margin: 0;
 	}
 }
 
+/* Main content */
+.contentframebackground {
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	width: $frame-width;
+	box-shadow: 0 0 4px 1px $color-frame-shadow;
+	background-color: $color-bg-light;
+
+	> .sidebarbackground {
+		width: $sidebar-width;
+		height: 100%;
+		background-color: $color-sidebar-bg;
+		border-right: solid 1px $color-sidebar-vert-line;
+	}
+}
+
+.spacerframe {
+	position: relative;
+	z-index: 100;
+	height: $spacer-height;
+	width: 100%;
+}
+
+.contentframe {
+	position: relative;
+	z-index: 100;
+}
+
 .content {
+	height: 100%;
 	width: $content-width;
 	margin: 0 0 0 auto;
 	padding: 0 3px 3px 0;

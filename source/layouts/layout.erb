@@ -21,23 +21,25 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-        <div class="mainframe headerframe roundlarge">
-            <div class="header">
-                <h1><%= link_to "Chemistry and Art: Old and New", "/index.html", :class => "htitle" %></h1>
-                <h3 class="htagline">Restoring the past, preserving the future</h3>
+        <div class="mainframe">
+            <div class="contentframebackground">
+                <div class="sidebarbackground"></div>
             </div>
-        </div>
-        <div class="mainframe roundsmall">
-            <div class="sidebar roundsmall">
-
-            <%= partial "sidebar" %>
-
-            </div> <!-- sidebar -->
-            <div class="content roundsmall">
-
-            <%= yield %>
-
-            </div> <!-- content -->
+            <div class="headerframe">
+                <div class="header">
+                    <h1><%= link_to "Chemistry and Art: Old and New", "/index.html", :class => "htitle" %></h1>
+                    <h3 class="htagline">Restoring the past, preserving the future</h3>
+                </div>
+            </div>
+            <div class="spacerframe"></div>
+            <div class="contentframe">
+                <div class="sidebar">
+                    <%= partial "sidebar" %>
+                </div><!-- sidebar -->
+                <div class="content">
+                    <%= yield %>
+                </div> <!-- content -->
+            </div>
         </div> <!-- mainframe -->
 
         <%= javascript_include_tag "vendor/jquery-1.8.0.min" %>
