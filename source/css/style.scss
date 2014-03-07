@@ -24,10 +24,10 @@ $color-header-bg: $kuler-red-light;
 
 /* Sidebar */
 $color-sidebar-bg: $kuler-blue-dark;
-$color-sidebar-bg: #EEE;
+$color-sidebar-bg: #E5E5E5;
 $color-sidebar-bg-hover: $kuler-blue-dark2;
 $color-sidebar-vert-line: #888;
-$color-sidebar-text: #333;
+$color-sidebar-text: #111;
 $color-sidebar-link: $color-sidebar-text;
 $color-sidebar-link-hover: #FFF;
 $color-sidebar-link-active: $color-sidebar-text;
@@ -116,6 +116,7 @@ a:hover, a:active {
 			> a:hover {
 				color: $color-sidebar-link-hover;
 				background-color: $color-sidebar-bg-hover;
+				font-weight: normal;
 			}
 			> .active {
 				color: $color-sidebar-link-active;
