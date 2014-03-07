@@ -30,6 +30,7 @@ $color-sidebar-vert-line: #888;
 $color-sidebar-text: #333;
 $color-sidebar-link: $color-sidebar-text;
 $color-sidebar-link-hover: #FFF;
+$color-sidebar-link-active: $color-sidebar-text;
 
 /* Main */
 $color-bg-dark: #222;
@@ -113,6 +114,10 @@ a:hover, a:active {
 			> a:hover {
 				color: $color-sidebar-link-hover;
 				background-color: $color-sidebar-bg-hover;
+			}
+			> .active {
+				color: $color-sidebar-link-active;
+				font-weight: bold;
 			}
 		}
 		padding: 0;
