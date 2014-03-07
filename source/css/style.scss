@@ -33,6 +33,7 @@ $color-sidebar-link-hover: #FFF;
 $color-sidebar-link-active: $color-sidebar-text;
 
 /* Main */
+$color-page-bg: #AAA;
 $color-bg-dark: #222;
 $color-bg-light: #F9F9F9;
 $color-frame-shadow: #222;
@@ -41,7 +42,7 @@ $color-link-hover: #CCC;
 
 /* General */
 html, body {
- 	background-color: #DDD;
+ 	background-color: $color-page-bg;
  	height: 100%;
 }
 
