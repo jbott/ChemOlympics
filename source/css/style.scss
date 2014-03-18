@@ -20,10 +20,9 @@ $kuler-red-light: #EC191D;
 
 /* Title */
 $color-header-title: white;
-$color-header-bg: $kuler-red-light;
+$color-header-bg: $kuler-blue-light;
 
 /* Sidebar */
-$color-sidebar-bg: $kuler-blue-dark;
 $color-sidebar-bg: #E5E5E5;
 $color-sidebar-bg-hover: $kuler-blue-dark2;
 $color-sidebar-vert-line: #888;
@@ -82,7 +81,10 @@ a:hover, a:active {
 	z-index: 100;
 	height: $header-height;
 	color: $color-header-title;
-	@include background-image(linear-gradient($color-header-bg, darken($color-header-bg, 20%) 70%, darken($color-header-bg, 40%)));
+	@include background-image(
+		linear-gradient($color-header-bg,
+						darken($color-header-bg, 10%) 60%,
+						darken($color-header-bg, 25%)));
 }
 
 .header {
