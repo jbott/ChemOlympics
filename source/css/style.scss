@@ -37,7 +37,7 @@ $color-image-border: #555;
 $color-image-div-border: #666;
 
 /* Main */
-$color-page-bg: #AAA;
+$color-page-bg: #B8B8B8;
 $color-bg-dark: #222;
 $color-bg-light: #F9F9F9;
 $color-frame-shadow: #222;
@@ -46,8 +46,7 @@ $color-link-hover: #CCC;
 
 /* General */
 html, body {
-	background-image: image-url("subtle_zebra_3d.png");
-	background-size: 160px;
+	background-color: $color-page-bg;
  	height: 100%;
 }
 
