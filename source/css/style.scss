@@ -114,7 +114,7 @@ a:hover, a:active {
 			list-style-type: none;
 			margin: 0;
 			border: 1px solid $color-sidebar-bg;
-			> a {
+			> a, > span {
 				width: $sidebar-width - 9px;
 				color: $color-sidebar-link;
 				padding: 4px 0 4px 8px;
@@ -204,4 +204,13 @@ div.img {
 
 .roundlarge {
 	border-radius: 4px;
+}
+
+.sources > p {
+	text-indent: -2em;
+	padding-left: 4em;
+}
+
+ul {
+	list-style-position: inside;
 }
