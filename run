@@ -2,6 +2,7 @@
 middleman build
 perl -pi -e "s/home.html/index.html/g" build/*.html
 
+# Run additional scripts ( Ex: sync to web server )
 if [ -e post ]; then
 	./post
 fi
