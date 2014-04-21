@@ -1,6 +1,10 @@
 #!/bin/bash
 middleman build
 perl -pi -e "s/home.html/index.html/g" build/*.html
+rm chemolympics.zip
+cd build
+zip -r ../chemolympics.zip *
+cd ..
 
 # Run additional scripts ( Ex: sync to web server )
 if [ -e post ]; then
